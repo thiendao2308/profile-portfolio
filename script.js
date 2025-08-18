@@ -2,7 +2,61 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize EmailJS
   if (typeof emailjs !== "undefined") {
-    emailjs.init("44betINxDyIogx1T6");
+    emailjs.init("44betInxDyIogx1T6");
+  }
+
+  // Mobile menu functionality
+  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+
+      // Animate hamburger menu
+      const spans = this.querySelectorAll("span");
+      if (!mobileMenu.classList.contains("hidden")) {
+        // Open menu - transform to X
+        spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+        spans[1].style.opacity = "0";
+        spans[2].style.transform = "rotate(-45deg) translate(7px, -6px)";
+      } else {
+        // Close menu - reset to hamburger
+        spans[0].style.transform = "none";
+        spans[1].style.opacity = "1";
+        spans[2].style.transform = "none";
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        mobileMenu.classList.add("hidden");
+
+        // Reset hamburger menu
+        const spans = mobileMenuBtn.querySelectorAll("span");
+        spans[0].style.transform = "none";
+        spans[1].style.opacity = "1";
+        spans[2].style.transform = "none";
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", function (event) {
+      if (
+        !mobileMenuBtn.contains(event.target) &&
+        !mobileMenu.contains(event.target)
+      ) {
+        mobileMenu.classList.add("hidden");
+
+        // Reset hamburger menu
+        const spans = mobileMenuBtn.querySelectorAll("span");
+        spans[0].style.transform = "none";
+        spans[1].style.opacity = "1";
+        spans[2].style.transform = "none";
+      }
+    });
   }
 
   // Smooth scrolling for navigation links

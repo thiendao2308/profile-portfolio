@@ -52,6 +52,37 @@
       .fade-in:nth-child(5) {
         transition-delay: 0.5s;
       }
+
+      /* Mobile menu animations */
+      #mobileMenu {
+        transition: all 0.3s ease-in-out;
+      }
+
+      /* Responsive skill bars */
+      @media (max-width: 768px) {
+        .skill-progress {
+          min-height: 8px;
+        }
+      }
+
+      /* Touch-friendly buttons on mobile */
+      @media (max-width: 640px) {
+        button,
+        a {
+          min-height: 44px;
+          min-width: 44px;
+        }
+      }
+
+      /* Improve readability on small screens */
+      @media (max-width: 480px) {
+        .text-4xl {
+          font-size: 1.75rem;
+        }
+        .text-3xl {
+          font-size: 1.5rem;
+        }
+      }
     </style>
   </head>
   <body
@@ -61,15 +92,19 @@
     <nav
       class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 py-4 transition-all duration-300 ease-in-out"
     >
-      <div class="max-w-6xl mx-auto px-5 flex justify-between items-center">
-        <div class="text-2xl font-bold">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center"
+      >
+        <div class="text-xl sm:text-2xl font-bold">
           <a
             href="#home"
             class="text-blue-600 hover:text-blue-700 transition-colors duration-300 ease-in-out no-underline"
             >Trang cá nhân</a
           >
         </div>
-        <ul class="flex list-none gap-8">
+
+        <!-- Desktop Navigation -->
+        <ul class="hidden lg:flex list-none gap-8">
           <li>
             <a
               href="#home"
@@ -106,7 +141,12 @@
             >
           </li>
         </ul>
-        <div class="hidden flex-col cursor-pointer">
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobileMenuBtn"
+          class="lg:hidden flex flex-col cursor-pointer p-2"
+        >
           <span
             class="w-6 h-0.5 bg-gray-700 my-0.5 transition-all duration-300"
           ></span>
@@ -116,51 +156,101 @@
           <span
             class="w-6 h-0.5 bg-gray-700 my-0.5 transition-all duration-300"
           ></span>
-        </div>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div
+        id="mobileMenu"
+        class="lg:hidden hidden bg-white/98 backdrop-blur-md border-t border-gray-200"
+      >
+        <ul class="px-4 py-6 space-y-4">
+          <li>
+            <a
+              href="#home"
+              class="block text-gray-700 no-underline font-medium py-2 transition-colors duration-300 ease-in-out hover:text-blue-600"
+              >01. Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="block text-gray-700 no-underline font-medium py-2 transition-colors duration-300 ease-in-out hover:text-blue-600"
+              >02. About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="block text-gray-700 no-underline font-medium py-2 transition-colors duration-300 ease-in-out hover:text-blue-600"
+              >03. Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="block text-gray-700 no-underline font-medium py-2 transition-colors duration-300 ease-in-out hover:text-blue-600"
+              >04. Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="block text-gray-700 no-underline font-medium py-2 transition-colors duration-300 ease-in-out hover:text-blue-600"
+              >05. Contact</a
+            >
+          </li>
+        </ul>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <section
       id="home"
-      class="fade-in pt-30 pb-20 bg-gradient-to-br from-indigo-400 to-purple-600 text-white min-h-screen flex items-center"
+      class="fade-in pt-24 sm:pt-28 lg:pt-30 pb-16 sm:pb-20 bg-gradient-to-br from-indigo-400 to-purple-600 text-white min-h-screen flex items-center"
     >
       <div
-        class="max-w-6xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center"
       >
-        <div>
+        <div class="text-center lg:text-left">
           <h1
-            class="text-6xl font-extrabold mb-4 bg-gradient-to-r from-white to-indigo-200 bg-clip-text text-transparent pb-4"
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 bg-gradient-to-r from-white to-indigo-200 bg-clip-text text-transparent pb-4"
           >
             Đào Công Thiện
           </h1>
-          <h2 class="text-2xl font-semibold mb-6 text-indigo-200">
+          <h2
+            class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-indigo-200"
+          >
             Backend Developer
           </h2>
-          <p class="text-lg mb-8 text-indigo-100 leading-relaxed">
+          <p
+            class="text-base sm:text-lg mb-6 sm:mb-8 text-indigo-100 leading-relaxed px-4 sm:px-0"
+          >
             Đam mê xây dựng các hệ thống backend mạnh mẽ, scalable và hiệu suất
             cao. Chuyên về Node.js, biết cơ bản về Python, database design.
           </p>
-          <div class="flex gap-4 flex-wrap">
+          <div
+            class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
+          >
             <a
               href="#contact"
-              class="inline-flex items-center gap-2 px-6 py-3 rounded-lg no-underline font-semibold transition-all duration-300 ease-in-out border-none cursor-pointer text-base bg-blue-600 text-white hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-600/30"
+              class="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg no-underline font-semibold transition-all duration-300 ease-in-out border-none cursor-pointer text-sm sm:text-base bg-blue-600 text-white hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-600/30"
             >
               <i class="fas fa-comments"></i>
               Liên hệ với tôi
             </a>
             <a
               href="#about"
-              class="inline-flex items-center gap-2 px-6 py-3 rounded-lg no-underline font-semibold transition-all duration-300 ease-in-out border-2 border-white cursor-pointer text-base bg-transparent text-white hover:bg-white hover:text-blue-600 hover:-translate-y-0.5"
+              class="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg no-underline font-semibold transition-all duration-300 ease-in-out border-2 border-white cursor-pointer text-sm sm:text-base bg-transparent text-white hover:bg-white hover:text-blue-600 hover:-translate-y-0.5"
             >
               <i class="fas fa-hand-wave"></i>
               Tìm hiểu thêm
             </a>
           </div>
         </div>
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center items-center order-first lg:order-last">
           <div
-            class="w-80 h-80 bg-white/10 rounded-full flex items-center justify-center text-8xl text-white/30 border-4 border-white/20"
+            class="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 bg-white/10 rounded-full flex items-center justify-center text-6xl sm:text-7xl lg:text-8xl text-white/30 border-4 border-white/20"
           >
             <img
               src="anh.jpg"
@@ -173,63 +263,83 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="fade-in py-20 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">
+    <section id="about" class="fade-in py-16 sm:py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-800"
+        >
           Về Tôi
         </h2>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 items-start"
+        >
           <div class="lg:col-span-2 fade-in">
-            <p class="mb-6 text-lg text-gray-600 leading-relaxed">
+            <p
+              class="mb-4 sm:mb-6 text-base sm:text-lg text-gray-600 leading-relaxed"
+            >
               Tôi là một Backend Developer với niềm đam mê mãnh liệt về việc xây
               dựng các hệ thống backend robust, scalable và hiệu suất cao. Với
               kinh nghiệm trong việc phát triển các API, database design và kiến
               trúc hệ thống, tôi luôn cập nhật những công nghệ mới nhất để mang
               lại sản phẩm chất lượng cao.
             </p>
-            <p class="mb-6 text-lg text-gray-600 leading-relaxed">
+            <p
+              class="mb-4 sm:mb-6 text-base sm:text-lg text-gray-600 leading-relaxed"
+            >
               Tôi tin rằng một hệ thống backend tốt không chỉ hoạt động ổn định
               mà còn phải dễ maintain, scale và bảo mật. Mỗi dự án tôi tham gia
               đều được thực hiện với sự tận tâm và chú ý đến từng chi tiết kỹ
               thuật.
             </p>
           </div>
-          <div class="flex flex-col gap-8">
+          <div class="flex flex-col gap-6 sm:gap-8">
             <div
-              class="fade-in text-center p-8 bg-white rounded-xl shadow-sm transition-transform duration-300 ease-in-out hover:-translate-y-1"
+              class="fade-in text-center p-6 sm:p-8 bg-white rounded-xl shadow-sm transition-transform duration-300 ease-in-out hover:-translate-y-1"
             >
-              <h3 class="text-4xl font-extrabold text-blue-600 mb-2">1.5+</h3>
-              <p class="text-gray-600 font-medium">Năm kinh nghiệm</p>
+              <h3
+                class="text-3xl sm:text-4xl font-extrabold text-blue-600 mb-2"
+              >
+                1.5+
+              </h3>
+              <p class="text-gray-600 font-medium text-sm sm:text-base">
+                Năm kinh nghiệm
+              </p>
             </div>
             <div
-              class="fade-in text-center p-8 bg-white rounded-xl shadow-sm transition-transform duration-300 ease-in-out hover:-translate-y-1"
+              class="fade-in text-center p-6 sm:p-8 bg-white rounded-xl shadow-sm transition-transform duration-300 ease-in-out hover:-translate-y-1"
             >
-              <h3 class="text-4xl font-extrabold text-blue-600 mb-2">5+</h3>
-              <p class="text-gray-600 font-medium">Dự án hoàn thành</p>
+              <h3
+                class="text-3xl sm:text-4xl font-extrabold text-blue-600 mb-2"
+              >
+                5+
+              </h3>
+              <p class="text-gray-600 font-medium text-sm sm:text-base">
+                Dự án hoàn thành
+              </p>
             </div>
-            <!-- <div
-              class="text-center p-8 bg-white rounded-xl shadow-sm transition-transform duration-300 ease-in-out hover:-translate-y-1"
-            >
-              <h3 class="text-4xl font-extrabold text-blue-600 mb-2">15+</h3>
-              <p class="text-gray-600 font-medium">Khách hàng hài lòng</p>
-            </div> -->
           </div>
         </div>
       </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="fade-in py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">
+    <section id="skills" class="fade-in py-16 sm:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-800"
+        >
           Skills & Technologies
         </h2>
-        <p class="text-lg text-center mb-12 text-gray-500 max-w-2xl mx-auto">
+        <p
+          class="text-base sm:text-lg text-center mb-8 sm:mb-12 text-gray-500 max-w-2xl mx-auto px-4"
+        >
           Đây là những công nghệ và kỹ năng mà tôi đã học được và áp dụng trong
           các dự án
         </p>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 mb-8 sm:mb-12"
+        >
           <div>
             <h3 class="text-2xl font-semibold mb-6 text-gray-800 text-center">
               Backend & API
@@ -390,10 +500,12 @@
         </div>
 
         <div class="text-center">
-          <h3 class="text-2xl font-semibold mb-6 text-gray-800">
+          <h3
+            class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-gray-800"
+          >
             Technologies
           </h3>
-          <div class="flex flex-wrap gap-4 justify-center">
+          <div class="flex flex-wrap gap-3 sm:gap-4 justify-center px-4">
             <span
               class="bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:-translate-y-0.5"
               >Node.js</span
@@ -440,10 +552,16 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="fade-in py-20 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">Dự Án</h2>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <section id="projects" class="fade-in py-16 sm:py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-800"
+        >
+          Dự Án
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+        >
           <div
             class="fade-in bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-2.5 hover:shadow-xl"
           >
@@ -580,16 +698,18 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="fade-in py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">
+    <section id="contact" class="fade-in py-16 sm:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-800"
+        >
           Get In Touch
         </h2>
-        <p class="text-lg text-center mb-4 text-gray-500">
+        <p class="text-base sm:text-lg text-center mb-4 text-gray-500">
           Hãy liên hệ với tôi!
         </p>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           <div>
             <h3 class="text-2xl font-semibold mb-6 text-gray-800">
               Thông tin liên hệ
@@ -705,9 +825,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white text-center py-8">
-      <div class="max-w-6xl mx-auto px-5">
-        <p>&copy; 2024 Đào Công Thiện. All rights reserved.</p>
+    <footer class="bg-gray-800 text-white text-center py-6 sm:py-8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-sm sm:text-base">
+          &copy; 2024 Đào Công Thiện. All rights reserved.
+        </p>
       </div>
     </footer>
 
