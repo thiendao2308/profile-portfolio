@@ -268,7 +268,7 @@
         <h2
           class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-800"
         >
-          Về Tôi
+          About me
         </h2>
         <div
           class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 items-start"
@@ -392,7 +392,7 @@
                   style="width: 85%"
                 ></div>
               </div>
-              <span class="min-w-10 font-semibold text-blue-600">85%</span>
+              <span class="min-w-10 font-semibold text-blue-600">80%</span>
             </div>
             <div class="flex items-center gap-4 mb-4 py-2">
               <span class="min-w-24 font-medium text-gray-700">GraphQL</span>
@@ -464,7 +464,7 @@
                   style="width: 85%"
                 ></div>
               </div>
-              <span class="min-w-10 font-semibold text-blue-600">85%</span>
+              <span class="min-w-10 font-semibold text-blue-600">80%</span>
             </div>
             <div class="flex items-center gap-4 mb-4 py-2">
               <span class="min-w-24 font-medium text-gray-700">Postman</span>
@@ -540,11 +540,15 @@
             >
             <span
               class="bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:-translate-y-0.5"
-              >Swagger</span
+              >GraphQL</span
             >
             <span
               class="bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:-translate-y-0.5"
-              >GraphQL</span
+              >ReactJS</span
+            >
+            <span
+              class="bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:-translate-y-0.5"
+              >.NET Core</span
             >
           </div>
         </div>
@@ -555,141 +559,292 @@
     <section id="projects" class="fade-in py-16 sm:py-20 bg-gray-50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
-          class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-800"
+          class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-800"
         >
-          Dự Án
+          Projects
         </h2>
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
-        >
+
+        <!-- Projects List -->
+        <div class="space-y-8">
+          <!-- Project 1 -->
           <div
-            class="fade-in bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-2.5 hover:shadow-xl"
+            class="fade-in bg-white rounded-xl shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg border border-gray-100 overflow-hidden"
           >
-            <div
-              class="h-50 bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center text-6xl text-white"
-            >
-              <i class="fas fa-code"></i>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2 text-gray-800">
-                E-commerce Backend API
-              </h3>
-              <p class="text-gray-600 mb-4 leading-relaxed">
-                RESTful API backend cho website bán hàng với Node.js và MongoDB
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >Node.js</span
-                >
-                <span
-                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >Express.js</span
-                >
-                <span
-                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >MongoDB</span
-                >
+            <div class="flex flex-col lg:flex-row">
+              <!-- Project Demo Image - Larger -->
+              <div
+                class="lg:w-80 lg:h-64 w-full h-48 bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center text-5xl lg:text-7xl text-white relative overflow-hidden"
+              >
+                <img
+                  src="image.png"
+                  alt="E-commerce Backend API"
+                  class="w-full h-full object-cover"
+                />
+                <!-- Optional: Add overlay with project name -->
+                <div class="absolute inset-0 bg-black/20 flex items-end">
+                  <div class="w-full p-4 text-white">
+                    <h4 class="text-lg font-semibold">AI CV Analysis API</h4>
+                  </div>
+                </div>
               </div>
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="text-blue-600 no-underline font-medium transition-colors duration-300 ease-in-out hover:text-blue-700"
-                  >Live Demo</a
-                >
-                <a
-                  href="#"
-                  class="text-blue-600 no-underline font-medium transition-colors duration-300 ease-in-out hover:text-blue-700"
-                  >GitHub</a
-                >
+
+              <!-- Project Content -->
+              <div class="flex-1 p-6 lg:p-8">
+                <div class="flex flex-col h-full">
+                  <!-- Project Header -->
+                  <div class="mb-4">
+                    <h3
+                      class="text-xl lg:text-2xl font-semibold mb-3 text-gray-800"
+                    >
+                      AI CV Analysis API
+                    </h3>
+                    <p
+                      class="text-gray-600 leading-relaxed text-sm lg:text-base"
+                    >
+                      AI-powered CV Analysis API với Python FastAPI và MERN
+                      Stack. Tích hợp OpenAI API, spaCy NLP, multi-database
+                      (MongoDB + Redis), JWT authentication, và Postman
+                      documentation. Hỗ trợ phân tích CV thông minh, JD
+                      matching, và LLM-powered feedback system.
+                    </p>
+                  </div>
+
+                  <!-- Technologies -->
+                  <div class="flex flex-wrap gap-2 mb-6">
+                    <span
+                      class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >Python</span
+                    >
+                    <span
+                      class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >FastAPI</span
+                    >
+                    <span
+                      class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >MongoDB</span
+                    >
+                    <span
+                      class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >Redis</span
+                    >
+                    <span
+                      class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >OpenAI API</span
+                    >
+                    <span
+                      class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >spaCy</span
+                    >
+                    <span
+                      class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >JWT</span
+                    >
+                    <span
+                      class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >Postman</span
+                    >
+                    <span
+                      class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >MERN Stack</span
+                    >
+                  </div>
+
+                  <!-- Project Actions & Info -->
+                  <div class="mt-auto">
+                    <div class="flex flex-col sm:flex-row gap-3 mb-3">
+                      <a
+                        href="https://timviecngay.vercel.app/"
+                        class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium transition-all duration-300 ease-in-out hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-lg"
+                      >
+                        <i class="fas fa-external-link-alt text-xs"></i>
+                        Live Demo
+                      </a>
+                      <a
+                        href="https://github.com/thiendao2308/api_analysis_CV"
+                        class="inline-flex items-center justify-center gap-2 px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg text-sm font-medium transition-all duration-300 ease-in-out hover:border-blue-600 hover:text-blue-600 hover:-translate-y-0.5"
+                      >
+                        <i class="fab fa-github text-xs"></i>
+                        GitHub
+                      </a>
+                    </div>
+                    <div class="text-xs text-gray-500">
+                      <i class="fas fa-calendar-alt mr-1"></i>
+                      Hoàn thành: 8/2025
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- Project 2 -->
           <div
-            class="fade-in bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-2.5 hover:shadow-xl"
+            class="fade-in bg-white rounded-xl shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg border border-gray-100 overflow-hidden"
           >
-            <div
-              class="h-50 bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center text-6xl text-white"
-            >
-              <i class="fas fa-mobile-alt"></i>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2 text-gray-800">
-                User Management System
-              </h3>
-              <p class="text-gray-600 mb-4 leading-relaxed">
-                Hệ thống quản lý người dùng với Python FastAPI và PostgreSQL
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >Python</span
-                >
-                <span
-                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >FastAPI</span
-                >
-                <span
-                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >PostgreSQL</span
-                >
+            <div class="flex flex-col lg:flex-row">
+              <!-- Project Demo Image - Larger -->
+              <div
+                class="lg:w-80 lg:h-64 w-full h-48 bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center text-5xl lg:text-7xl text-white relative overflow-hidden"
+              >
+                <i class="fas fa-users"></i>
+                <!-- Optional: Add overlay with project name -->
+                <div class="absolute inset-0 bg-black/20 flex items-end">
+                  <div class="w-full p-4 text-white">
+                    <h4 class="text-lg font-semibold">
+                      User Management System
+                    </h4>
+                  </div>
+                </div>
               </div>
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="text-blue-600 no-underline font-medium transition-colors duration-300 ease-in-out hover:text-blue-700"
-                  >Live Demo</a
-                >
-                <a
-                  href="#"
-                  class="text-blue-600 no-underline font-medium transition-colors duration-300 ease-in-out hover:text-blue-700"
-                  >GitHub</a
-                >
+
+              <!-- Project Content -->
+              <div class="flex-1 p-6 lg:p-8">
+                <div class="flex flex-col h-full">
+                  <!-- Project Header -->
+                  <div class="mb-4">
+                    <h3
+                      class="text-xl lg:text-2xl font-semibold mb-3 text-gray-800"
+                    >
+                      User Management System
+                    </h3>
+                    <p
+                      class="text-gray-600 leading-relaxed text-sm lg:text-base"
+                    >
+                      Hệ thống quản lý người dùng với Python FastAPI và
+                      PostgreSQL. Tính năng role-based access control, audit
+                      logging, và RESTful API documentation với Swagger.
+                    </p>
+                  </div>
+
+                  <!-- Technologies -->
+                  <div class="flex flex-wrap gap-2 mb-6">
+                    <span
+                      class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >Python</span
+                    >
+                    <span
+                      class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >FastAPI</span
+                    >
+                    <span
+                      class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >PostgreSQL</span
+                    >
+                    <span
+                      class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >Swagger</span
+                    >
+                  </div>
+
+                  <!-- Project Actions & Info -->
+                  <div class="mt-auto">
+                    <div class="flex flex-col sm:flex-row gap-3 mb-3">
+                      <a
+                        href="#"
+                        class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium transition-all duration-300 ease-in-out hover:bg-green-700 hover:-translate-y-0.5 hover:shadow-lg"
+                      >
+                        <i class="fas fa-external-link-alt text-xs"></i>
+                        Live Demo
+                      </a>
+                      <a
+                        href="#"
+                        class="inline-flex items-center justify-center gap-2 px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg text-sm font-medium transition-all duration-300 ease-in-out hover:border-green-600 hover:text-green-600 hover:-translate-y-0.5"
+                      >
+                        <i class="fab fa-github text-xs"></i>
+                        GitHub
+                      </a>
+                    </div>
+                    <div class="text-xs text-gray-500">
+                      <i class="fas fa-calendar-alt mr-1"></i>
+                      Hoàn thành: 2024
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- Project 3 -->
           <div
-            class="fade-in bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-2.5 hover:shadow-xl"
+            class="fade-in bg-white rounded-xl shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg border border-gray-100 overflow-hidden"
           >
-            <div
-              class="h-50 bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center text-6xl text-white"
-            >
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2 text-gray-800">
-                Authentication System
-              </h3>
-              <p class="text-gray-600 mb-4 leading-relaxed">
-                Hệ thống xác thực và phân quyền với JWT và Redis
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >Node.js</span
-                >
-                <span
-                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >JWT</span
-                >
-                <span
-                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >Redis</span
-                >
+            <div class="flex flex-col lg:flex-row">
+              <!-- Project Demo Image - Larger -->
+              <div
+                class="lg:w-80 lg:h-64 w-full h-48 bg-gradient-to-br from-purple-400 to-pink-600 flex items-center justify-center text-5xl lg:text-7xl text-white relative overflow-hidden"
+              >
+                <i class="fas fa-shield-alt"></i>
+                <!-- Optional: Add overlay with project name -->
+                <div class="absolute inset-0 bg-black/20 flex items-end">
+                  <div class="w-full p-4 text-white">
+                    <h4 class="text-lg font-semibold">Authentication System</h4>
+                  </div>
+                </div>
               </div>
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="text-blue-600 no-underline font-medium transition-colors duration-300 ease-in-out hover:text-blue-700"
-                  >Live Demo</a
-                >
-                <a
-                  href="#"
-                  class="text-blue-600 no-underline font-medium transition-colors duration-300 ease-in-out hover:text-blue-700"
-                  >GitHub</a
-                >
+
+              <!-- Project Content -->
+              <div class="flex-1 p-6 lg:p-8">
+                <div class="flex flex-col h-full">
+                  <!-- Project Header -->
+                  <div class="mb-4">
+                    <h3
+                      class="text-xl lg:text-2xl font-semibold mb-3 text-gray-800"
+                    >
+                      Authentication System
+                    </h3>
+                    <p
+                      class="text-gray-600 leading-relaxed text-sm lg:text-base"
+                    >
+                      Hệ thống xác thực và phân quyền với JWT và Redis. Hỗ trợ
+                      multi-factor authentication, session management, và rate
+                      limiting để bảo mật API.
+                    </p>
+                  </div>
+
+                  <!-- Technologies -->
+                  <div class="flex flex-wrap gap-2 mb-6">
+                    <span
+                      class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >Node.js</span
+                    >
+                    <span
+                      class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >JWT</span
+                    >
+                    <span
+                      class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >Redis</span
+                    >
+                    <span
+                      class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs lg:text-sm font-medium"
+                      >Express.js</span
+                    >
+                  </div>
+
+                  <!-- Project Actions & Info -->
+                  <div class="mt-auto">
+                    <div class="flex flex-col sm:flex-row gap-3 mb-3">
+                      <a
+                        href="#"
+                        class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium transition-all duration-300 ease-in-out hover:bg-purple-700 hover:-translate-y-0.5 hover:shadow-lg"
+                      >
+                        <i class="fas fa-external-link-alt text-xs"></i>
+                        Live Demo
+                      </a>
+                      <a
+                        href="#"
+                        class="inline-flex items-center justify-center gap-2 px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg text-sm font-medium transition-all duration-300 ease-in-out hover:border-purple-600 hover:text-purple-600 hover:-translate-y-0.5"
+                      >
+                        <i class="fab fa-github text-xs"></i>
+                        GitHub
+                      </a>
+                    </div>
+                    <div class="text-xs text-gray-500">
+                      <i class="fas fa-calendar-alt mr-1"></i>
+                      Hoàn thành: 2024
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
